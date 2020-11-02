@@ -3,11 +3,70 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>SakinaHistoire | E-commerce Siteweb Livres</title>
 </head>
 <body>
-    <header>
-        <img src="{{url_for('static', filename='Logo.png')}}"/>
-    </header>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="{{url_for('static', filename='Logo.png')}}" width="125px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Accueille</a></li>
+                <li><a href="">Produits</a></li>
+                <li><a href="">À propos</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Compte</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <h1>Hello World</h1>
+        </div>
+        <div class="col-2">
+
+        </div>
+    </div>
+    </div>
 </body>
 </html>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+</style>
