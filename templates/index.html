@@ -3,71 +3,206 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>SakinaHistoire | E-commerce Siteweb Livres</title>
+    <title>SakinaHistoire - Telechargement de livres pdf</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='icon.ico')}}" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 </head>
 <body>
-    <div class="container">
-    <div class="navbar">
-        <div class="logo">
-            <img src="{{url_for('static', filename='Logo.png')}}" width="125px">
+    <section class="top-page">
+        <header class="header">
+            <img src="{{url_for('static', filename='Logo.png')}}" alt="SakinaHistoire">
+            <nav class="nav">
+                <li>Accueil</li>
+                <li>Histoires</li>
+                <li>Se connecter</li>
+            </nav>
+        </header>
+        <div class="landing-page">
+            <h1 class="big-title">Paix Interieure pour nous et nos enfants.</h1>
+            <a class="scroll-down" href="#bests-items">Scroll <i class="fas fa-angle-down"></i></a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="">Accueil</a></li>
-                <li><a href="">Produits</a></li>
-                <li><a href="">À propos</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Compte</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="row">
-        <div class="col-2">
-            <h1>Histoires pour la Paix interieure pour <br>nous et nos enfants</h1>
-            <p>Bla Bla Bla Bla Bla Bla Bla Bal Bla Bla <br> Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla <br> Bla Bla Bla Bla Bla Bla ...</p>
+    </section>
+    <section class="services">
+        <div class="service-item">
+            <i class="fas fa-mouse-pointer delivery-icon"></i>
+            <p class="service-details">Avoire les livres en un click</p>
         </div>
-        <div class="col-2">
-
+        <div class="service-item">
+            <i class="fas fa-comment-dollar delivery-icon"></i>
+            <p class="service-details">Les livres Gratuit ou de bas prix</p>
         </div>
-    </div>
-    </div>
+    </section>
+    <section class="bests-items" id="bests-items">
+        <h2 class="section-title">
+            Nos meilleurs histoires
+        </h2>
+        <div class="best-stories">
+            <a class="story-box story1 no-grid">
+                <div class="story-details">
+                    <p class="story-name">{{beststory1}}</p>
+                    <p class="story-price">{{beststory1price}}</p>
+                </div>
+            </a>
+            <a class="story-box story2 no-grid">
+            <div class="story-details">
+                <p class="story-name">{{beststory2}}</p>
+                <p class="story-price">{{beststory2price}}</p>
+            </div>
+        </a>
+            <a class="story-box story3 no-grid">
+            <div class="story-details">
+                <p class="story-name">{{beststory3}}</p>
+                <p class="story-price">{{beststory3price}}</p>
+            </div>
+        </a>
+        </div>
+    </section>
 </body>
 </html>
 
 <style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+
+* {
+    font-family: 'Montserrat';
 }
-.navbar{
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0 auto;
+}
+
+header.header {
     display: flex;
     align-items: center;
-    padding: 20px;
 }
-nav{
-    flex: 1;
-    text-align: right;
+
+header.header img {
+    width: 150px;
 }
-nav ul{
-    display: inline-block;
-    list-style-type: none;
+
+section.top-page {
+    background: url("{{url_for('static', filename='bg.jpg')}}");
+    background-size: cover;
+    height: 80vh;
+    padding: 25px;
 }
-nav ul li{
-    display: inline-block;
-    margin-right: 20px;
+
+.landing-page {
+    padding: 20px 50px;
 }
-a{
+
+.big-title {
+    color: white;
+    font-size: 80px;
+    font-family: 'Abril FatFace', cursive;
+    font-weight: 100;
+}
+.scroll-down {
+    color: white;
     text-decoration: none;
-    color: #555;
+    position: absolute;
+    bottom: 160px;
 }
-p{
-    color: #555;
+/* menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 400px;
+    margin-left: 30px;
 }
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+nav.nav li {
+    color: white;
+}
+/* service */
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.delivery-icon {
+    font-size: 50px;
+    color: #ADD981;
+}
+.service-details {
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+}
+/* best sells */
+
+.section-title {
+    font-size: 50px;
+    font-family: 'Abril FatFace', cursive;
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    position: relative;
+    background-color: #ADD981;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+.bests-items {
+    margin: 50px;
+}
+.best-stories {
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.story-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-width: 350px;
+    height: 500px;
+    flex: 1;
+}
+.no-grid {
+    min-width: 350px;
+    height: 500px;
+    flex: 1;
+}
+.story1 {
+    background-image: url({{url_for('static', filename='1.jpg')}});
+}
+.story2 {
+    background-image: url({{url_for('static', filename='2.jpg')}});
+}
+.story3 {
+    background-image: url({{url_for('static', filename='3.jpg')}});
+}
+.story-details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #FFFFFFDF;
+    padding: 5px 20px;
+}
+.story-name {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 3px;
+}
+.story-price {
+    color: #ADD981;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 3px;
 }
 </style>
