@@ -15,7 +15,7 @@ This is my Website project using Flask and html
 
   _ run `env\Scripts\Activate` in cmd
 
-  _ create file named [app.py]() in Project directory
+  _ create file named [app.py](app.py) in Project directory
 
   _ run `set FLASK_APP=app.py` in cmd
 
