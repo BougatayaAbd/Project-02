@@ -9,7 +9,7 @@ This is my Website project using Flask and html
 
   _ run in cmd `pip install flask` to install flask module
 
-  _ go to Project directorie using cmd `cd <Folder>`
+  _ go to Project directorie using cmd `cd Project-02`
 
   _ run `py -m venv env` in cmd
 
