@@ -19,6 +19,6 @@ This is my Website project using Flask and html
 
   _ run `set FLASK_APP=app.py` in cmd
 
-  _ run set `FLASK_DEBUG=1` in cmd
+  _ run `set FLASK_DEBUG=1` in cmd
 
   and now you can run using `flask run` command in cmd

@@ -8,18 +8,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 </head>
 <body>
-    <!-- <section class="top-page">
+    <section class="top-page">
         <header class="header">
             <img src="{{url_for('static', filename='Logo.png')}}" alt="SakinaHistoire">
             <nav class="nav">
-                <li>Accueil</li>
-                <li>Histoires</li>
-                <li>Se connecter</li>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Histoires</a></li>
+                <li><a href="">Se Connecter</a></li>
             </nav>
         </header>
         <div class="landing-page">
             <h1 class="big-title">Paix Interieure pour nous et nos enfants.</h1>
-            <a class="scroll-down" href="#bests-items">Scroll <i class="fas fa-angle-down"></i></a>
+            <a class="scroll-down" href="#down">Scroll <i class="fas fa-angle-down"></i></a>
         </div>
     </section>
     <section class="services">
@@ -32,7 +32,7 @@
             <p class="service-details">Les livres Gratuit ou de bas prix</p>
         </div>
     </section>
-    <section class="bests-items" id="bests-items">
+    <section class="bests-items" id="down">
         <h2 class="section-title">
             Nos meilleurs histoires
         </h2>
@@ -56,18 +56,13 @@
             </div>
         </a>
         </div>
-    </section> -->
-    <section class="all-stories">
-        <h2 class="section-title">Nos histoires</h2>
-        <div class="story-grid">
-            <a class="story-grid1 story-box"><div class="story-details"><p class="story-name">Histoire</p><p class="story-price">Gratuit</p></div></a>
-            <a class="story-grid2 story-box"><div class="story-details"><p class="story-name">Histoire</p><p class="story-price">Gratuit</p></div></a>
-            <a class="story-grid3 story-box"><div class="story-details"><p class="story-name">Histoire</p><p class="story-price">Gratuit</p></div></a>
-            <a class="story-grid4 story-box"><div class="story-details"><p class="story-name">Histoire</p><p class="story-price">Gratuit</p></div></a>
-            <a class="story-grid5 story-box"><div class="story-details"><p class="story-name">Histoire</p><p class="story-price">Gratuit</p></div></a>
-            <a class="story-grid6 story-box"><div class="story-details"><p class="story-name">Histoire</p><p class="story-price">Gratuit</p></div></a>
-        </div>
     </section>
+    <footer>
+        <p class="copyright">
+            &copy; 2020 - Sakina Histoire
+        </p>
+        <a href="" class="cgv">conditions generales de ventes</a>
+    </footer>
 </body>
 </html>
 
@@ -128,8 +123,9 @@ nav.nav {
     width: 400px;
     margin-left: 30px;
 }
-nav.nav li {
+nav.nav li a{
     color: white;
+    text-decoration: none;
 }
 /* service */
 .services {
@@ -216,53 +212,15 @@ nav.nav li {
     font-weight: 800;
     line-height: 3px;
 }
-/* Nos Histoires */
-
-.all-stories {
-    margin: 100px;
+footer {
+    display: flex;
+    align-items: center;
+    margin: 20px 100px;
+    justify-content: space-between;
+    font-weight: 600;
 }
-.story-grid {
-    min-height: 150vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 400px);
-}
-.story-grid1 {
-    background-image: url('../static/5.jpg');
-    background-image: url("{{url_for('static', filename='5.jpg')}}");
-    grid-column: 1/3;
-    grid-row: 1/3;
-}
-
-.story-grid2 {
-    background-image: url('../static/6.jpg');
-    background-image: url("{{url_for('static', filename='6.jpg')}}");
-    grid-column: 3/5;
-}
-
-.story-grid3 {
-    background-image: url('../static/7.jpg');
-    background-image: url("{{url_for('static', filename='7.jpg')}}");
-    grid-column: 3/5;
-}
-
-.story-grid4 {
-    background-image: url('../static/8.jpg');
-    background-image: url("{{url_for('static', filename='8.jpg')}}");
-    grid-column: 1;
-    grid-row: 3/5;
-}
-
-.story-grid5 {
-    background-image: url('../static/9.jpg');
-    background-image: url("{{url_for('static', filename='9.jpg')}}");
-    grid-column: 2/4;
-    grid-row: 3/5;
-}
-
-.story-grid6 {
-    background-image: url('../static/10.jpg');
-    background-image: url("{{url_for('static', filename='10.jpg')}}");
-    grid-column: 4;
-    grid-row: 3/5;
+footer a.cgv {
+    text-decoration: none;
+    color: black;
 }
 </style>
