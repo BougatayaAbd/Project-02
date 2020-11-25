@@ -19,7 +19,9 @@
     </section>
     <div class="seconnecter">
         <div class="form-box">
+            <div class="button-box">
 
+            </div>
         </div>
     </div>
 </body>
@@ -99,9 +101,20 @@
         cursor: default;
     }
     .seconnecter {
-    background: url("{{url_for('static', filename='banner.jpg')}}");
-    background-size: cover;
-    height: 80vh;
-    padding: 25px;
+        background: url("{{url_for('static', filename='banner.jpg')}}");
+        background-size: cover;
+        height: 80vh;
+        padding: 25px;
+    }
+    .from-box {
+        width: 380px;
+        height: 480px;
+        position: relative;
+        margin: 6% auto;
+        background: #fff;
+        padding: 5px;
+    }
+    .button-box {
+        
     }
 </style>
