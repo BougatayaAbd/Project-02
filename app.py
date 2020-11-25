@@ -38,6 +38,6 @@ def index():
         beststory3price = str(beststory3price)
         beststory3price = beststory3price + " MAD"
     return render_template("index.html", beststory1=beststory1, beststory2=beststory2, beststory3=beststory3, beststory1price=beststory1price, beststory2price=beststory2price, beststory3price=beststory3price)
-@app.route('/')
+@app.route('/products')
 def products():
     return render_template('products.html')
