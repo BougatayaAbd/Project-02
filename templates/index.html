@@ -14,7 +14,7 @@
             <nav class="nav">
                 <li><a href="/">Accueil</a></li>
                 <li><a href="products">Histoires</a></li>
-                <li><a href="">Se Connecter</a></li>
+                <li><a href="seconnecter">Se Connecter</a></li>
             </nav>
         </header>
         <div class="landing-page">
@@ -126,6 +126,20 @@ nav.nav {
 nav.nav li a{
     color: white;
     text-decoration: none;
+    cursor: default;
+}
+nav.nav li {
+    transition: .3s linear;
+}
+nav.nav li:hover {
+    background-color: green;
+    color: black;
+    padding: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+.Logo {
+    cursor: default;
 }
 /* service */
 .services {
