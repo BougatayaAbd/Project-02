@@ -1,15 +1,23 @@
 const {app, BrowserWindow} = require('electron');
 const url = require('url');
 
-let win = null
-
 function boot() {
-    win = new BrowserWindow({
-        width: 1366,
-        height: 768,
+    win = new BrowserWindow()
+    win.loadURL(url.format({
+        pathname: 'products.html',
+        slashes: true,
         frame: false
-    })
-    win.loadURL('file://${__dirname}/index.html')
+    }))
+    win.loadURL(url.format({
+        pathname: 'seconnecter.html',
+        slashes: true,
+        frame: false
+    }))
+    win.loadURL(url.format({
+        pathname: 'index.html',
+        slashes: true,
+        frame: false
+    }))
 }
 
 app.on('ready', boot)
