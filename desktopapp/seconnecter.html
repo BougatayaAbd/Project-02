@@ -9,7 +9,7 @@
 <body>
     <section class="top-page">
         <header class="header">
-            <a href="/" class="Logo"><img src="C:\Users\user\OneDrive\Bureau\Python\Project-02\static\Logo.png" alt="SakinaHistoire"></a>
+            <a href="index.html" class="Logo"><img src="C:\Users\user\OneDrive\Bureau\Python\Project-02\static\Logo.png" alt="SakinaHistoire"></a>
             <nav class="nav">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="products.html">Histoires</a></li>
@@ -17,14 +17,6 @@
             </nav>
         </header>
     </section>
-    <div class="seconnecter">
-        <div class="form-box">
-            <div class="button-box">
-
-            </div>
-        </div>
-    </div>
-</body>
 </html>
 <style>
     
@@ -34,87 +26,40 @@
     
     * {
         font-family: 'Montserrat';
+        margin: 0;
+        padding: 0;
     }
     html {
         scroll-behavior: smooth;
     }
-    body {
-        margin: 0 auto;
+    .top-page {
+        height: 90px;
     }
-    
-    header.header {
-        display: flex;
-        align-items: center;
-    }
-    
-    header.header img {
-        width: 150px;
-    }
-    
-    section.top-page {
-        background-color: darkolivegreen;
-        background-size: cover;
-        padding: 25px;
-    }
-    
-    .landing-page {
-        padding: 20px 50px;
-    }
-    
-    .big-title {
-        color: white;
-        font-size: 80px;
-        font-family: 'Abril FatFace', cursive;
-        font-weight: 100;
-    }
-    .scroll-down {
-        color: white;
+    .header {
+        max-width: 1000px;
+        padding: 0 10px;
+        margin: auto;
         text-decoration: none;
-        position: absolute;
-        bottom: 160px;
-    }
-    /* menu de navigation */
-    
-    nav.nav {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        width: 400px;
-        margin-left: 30px;
-    }
-    nav.nav li a{
-        color: white;
-        text-decoration: none;
-        cursor: default;
-    }
-    nav.nav li {
-        transition: .3s linear;
-    }
-    nav.nav li:hover {
-        background-color: green;
-        color: black;
-        padding: 10px;
-        position: relative;
-        border-radius: 5px;
     }
     .Logo {
-        cursor: default;
+        float: left;
+        padding: 20px 0;
     }
-    .seconnecter {
-        background: url("C:/Users/user/OneDrive/Bureau/Python/Project-02/static/banner.jpg");
-        background-size: cover;
-        height: 80vh;
-        padding: 25px;
+    .Logo img {
+        height: 50px;
     }
-    .from-box {
-        width: 380px;
-        height: 480px;
-        position: relative;
-        margin: 6% auto;
-        background: #fff;
-        padding: 5px;
+    .nav {
+        float: right;
+        display: flex;
+        align-items: center;
+        min-height: 90px;
     }
-    .button-box {
-        
+    .nav li {
+        margin-left: 10px;
+        color: #ddd;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 12px 20px;
+        background-color: ;
     }
 </style>
