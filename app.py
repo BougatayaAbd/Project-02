@@ -45,3 +45,5 @@ def products():
 @app.route('/seconnecter')
 def seconnecter():
     return render_template('seconnecter.html')
+if __name__ == "__main__":
+    app.run(debug=True)
