@@ -1,6 +1,5 @@
 const {app, BrowserWindow, Menu} = require('electron');
 Menu.setApplicationMenu(false)
-
 const url = require('url');
 
 function boot() {
