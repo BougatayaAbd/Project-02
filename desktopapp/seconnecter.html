@@ -5,6 +5,19 @@
     <title>SakinaHistoire - Telechargement de livres pdf</title>
     <link rel="shortcut icon" href="C:\Users\user\OneDrive\Bureau\Python\Project-02\static\icon.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+	    container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+	    container.classList.remove("right-panel-active");
+    });
+    </script>
 </head>
 <body>
     <section class="top-page">
