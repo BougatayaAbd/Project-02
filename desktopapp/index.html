@@ -10,11 +10,11 @@
 <body>
     <section class="top-page">
         <header class="header">
-            <img src="C:\Users\user\OneDrive\Bureau\Python\Project-02\static\Logo.png" alt="SakinaHistoire">
+            <a href="index.html" class="Logo"><img src="C:\Users\user\OneDrive\Bureau\Python\Project-02\static\Logo.png" alt="SakinaHistoire"></a>
             <nav class="nav">
-                <li><a href="">Accueil</a></li>
-                <li><a href="products.html">Histoires</a></li>
-                <li><a href="seconnecter.html">Se Connecter</a></li>
+                <a href="index.html">Accueil</a>
+                <a href="products.html">Histoires</a>
+                <a href="seconnecter.html">Se Connecter</a>
             </nav>
         </header>
         <div class="landing-page">
@@ -74,6 +74,9 @@
 
 * {
     font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 html {
     scroll-behavior: smooth;
@@ -116,30 +119,37 @@ section.top-page {
 }
 /* menu de navigation */
 
-nav.nav {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    width: 400px;
-    margin-left: 30px;
-}
-nav.nav li a{
-    color: white;
-    text-decoration: none;
-    cursor: default;
-}
-nav.nav li {
-    transition: .3s linear;
-}
-nav.nav li:hover {
-    background-color: green;
-    color: black;
-    padding: 10px;
-    position: relative;
-    border-radius: 5px;
+.header {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
 }
 .Logo {
-    cursor: default;
+    float: left;
+    padding: 20px 0;
+}
+.Logo img {
+    height: 50px;
+}
+.nav {
+    float: right;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+}
+.nav a{
+    margin-left: 10px;
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: .3 linear;
+}
+.nav a:hover {
+    background: #fff;
+    color: #2f3640;
+    transform: scale(1.1);
 }
 /* service */
 .services {

@@ -11,9 +11,9 @@
         <header class="header">
             <a href="index.html" class="Logo"><img src="C:\Users\user\OneDrive\Bureau\Python\Project-02\static\Logo.png" alt="SakinaHistoire"></a>
             <nav class="nav">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="products.html">Histoires</a></li>
-                <li><a href="seconnecter.html">Se Connecter</a></li>
+                <a href="index.html">Accueil</a>
+                <a href="products.html">Histoires</a>
+                <a href="seconnecter.html">Se Connecter</a>
             </nav>
         </header>
     </section>
@@ -28,18 +28,19 @@
         font-family: 'Montserrat';
         margin: 0;
         padding: 0;
+        text-decoration: none;
     }
     html {
         scroll-behavior: smooth;
     }
     .top-page {
         height: 90px;
+        background-color: green;
     }
     .header {
         max-width: 1000px;
         padding: 0 10px;
         margin: auto;
-        text-decoration: none;
     }
     .Logo {
         float: left;
@@ -54,12 +55,18 @@
         align-items: center;
         min-height: 90px;
     }
-    .nav li {
+    .nav a{
         margin-left: 10px;
         color: #ddd;
         text-transform: uppercase;
         font-size: 14px;
         padding: 12px 20px;
-        background-color: ;
+        border-radius: 4px;
+        transition: .3 linear;
+    }
+    .nav a:hover {
+        background: #fff;
+        color: #2f3640;
+        transform: scale(1.1);
     }
 </style>

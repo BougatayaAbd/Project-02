@@ -11,9 +11,9 @@
         <header class="header">
             <a href="index.html" class="Logo"><img src="C:\Users\user\OneDrive\Bureau\Python\Project-02\static\Logo.png" alt="SakinaHistoire"></a>
             <nav class="nav">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="">Histoires</a></li>
-                <li><a href="seconnecter.html">Se Connecter</a></li>
+                <a href="index.html">Accueil</a>
+                <a href="products.html">Histoires</a>
+                <a href="seconnecter.html">Se Connecter</a>
             </nav>
         </header>
     </section>
@@ -21,76 +21,53 @@
 </html>
 <style>
     
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
-
-@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
-
-* {
-    font-family: 'Montserrat';
-}
-html {
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0 auto;
-}
-
-header.header {
-    display: flex;
-    align-items: center;
-}
-
-header.header img {
-    width: 150px;
-}
-
-section.top-page {
-    background-color: darkolivegreen;
-    background-size: cover;
-    padding: 25px;
-}
-
-.landing-page {
-    padding: 20px 50px;
-}
-
-.big-title {
-    color: white;
-    font-size: 80px;
-    font-family: 'Abril FatFace', cursive;
-    font-weight: 100;
-}
-.scroll-down {
-    color: white;
-    text-decoration: none;
-    position: absolute;
-    bottom: 160px;
-}
-/* menu de navigation */
-
-nav.nav {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    width: 400px;
-    margin-left: 30px;
-}
-nav.nav li a{
-    color: white;
-    text-decoration: none;
-    cursor: default;
-}
-nav.nav li {
-    transition: .3s linear;
-}
-nav.nav li:hover {
-    background-color: green;
-    color: black;
-    padding: 10px;
-    position: relative;
-    border-radius: 5px;
-}
-.Logo {
-    cursor: default;
-}
+    @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+    
+    @import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+    
+    * {
+        font-family: 'Montserrat';
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    .top-page {
+        height: 90px;
+        background-color: green;
+    }
+    .header {
+        max-width: 1000px;
+        padding: 0 10px;
+        margin: auto;
+    }
+    .Logo {
+        float: left;
+        padding: 20px 0;
+    }
+    .Logo img {
+        height: 50px;
+    }
+    .nav {
+        float: right;
+        display: flex;
+        align-items: center;
+        min-height: 90px;
+    }
+    .nav a{
+        margin-left: 10px;
+        color: #ddd;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 12px 20px;
+        border-radius: 4px;
+        transition: .3 linear;
+    }
+    .nav a:hover {
+        background: #fff;
+        color: #2f3640;
+        transform: scale(1.1);
+    }
 </style>
