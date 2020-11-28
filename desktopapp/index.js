@@ -13,7 +13,7 @@ function boot() {
         slashes: true
     }))
     win.loadURL(url.format({
-        pathname: '',
+        pathname: 'index.html',
         slashes: true
     }))
 }
