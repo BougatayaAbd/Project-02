@@ -53,7 +53,7 @@ def products():
 @app.route('/seconnecter', methods=['GET', 'POST'])
 def seconnecter():
     if request.method == 'POST':
-        userDetails = request.from
+        userDetails = request.form
         name = userDetails['name']
         email = userDetails['email']
         password = userDetails['password']
