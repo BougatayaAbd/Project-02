@@ -39,19 +39,19 @@
         </h2>
         <div class="best-stories">
             <a class="story-box story1 no-grid">
-                <div class="story-details dark-theme || light-theme">
+                <div class="story-details">
                     <p class="story-name">{{beststory1}}</p>
                     <p class="story-price">{{beststory1price}}</p>
                 </div>
             </a>
             <a class="story-box story2 no-grid">
-            <div class="story-details dark-theme || light-theme">
+            <div class="story-details">
                 <p class="story-name">{{beststory2}}</p>
                 <p class="story-price">{{beststory2price}}</p>
             </div>
         </a>
             <a class="story-box story3 no-grid">
-            <div class="story-details dark-theme || light-theme">
+            <div class="story-details">
                 <p class="story-name">{{beststory3}}</p>
                 <p class="story-price">{{beststory3price}}</p>
             </div>
@@ -236,9 +236,6 @@ body.dark-theme {
   color: #eee;
   background: #121212;
 }
-div.dark-theme {
-    background-color: #000000;
-}
 </style>
 <script>
 // Select the button
@@ -247,9 +244,6 @@ const btn = document.querySelector('.theme-btn');
 // Listen for a click on the button
 btn.addEventListener('click', function() {
   // Then toggle (add/remove) the .dark-theme class to the body
-  document.body.classList.toggle('dark-theme');  
+  document.body.classList.toggle('dark-theme');
 })
-if(document.body.classList.toggle('dark-theme')){
-    document.div.classList.toggle('dark-theme');
-}
 </script>
