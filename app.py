@@ -1,23 +1,14 @@
 from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
-import yaml
 
 app = Flask(__name__)
+app.config['MYSQL_HOST'] = ''
+app.config['MYSQL_USER'] = ''
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = ''
 
-
-db = yaml.load(open('db.yaml'))
-app.config['MYSQL_HOST'] = db['mysql_host']
-app.config['MYSQL_USER'] = db['mysql_user']
-app.config['MYSQL_PASSWORD'] = db['mysql_password']
-app.config['MYSQL_DB'] = db['mysql_db']
-
-mysql = MySQL(app)
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
-    if request.method == 'POST':
-
-
     ##########Best Books names#########
 
     beststory1 = "Histoire 01"
@@ -58,11 +49,10 @@ def products():
 @app.route('/seconnecter', methods=['GET', 'POST'])
 def seconnecter():
     if request.method == 'POST':
-        userDetails = request.form
+        userDetails = request.from
         name = userDetails['name']
         email = userDetails['email']
-        cur = mysql.connection.cursor()
-        cur.executr("INSERT INTO users(name, email) VALUES(%s, %s), ")
+        password = userDetails['password']
     return render_template('seconnecter.html')
 if __name__ == "__main__":
     app.run(debug=True)
