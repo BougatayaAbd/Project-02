@@ -58,7 +58,7 @@ def seconnecter():
         email = userDetails['email']
         password = userDetails['password']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO users(name, email, password) VALUES(%s, %s)", (name, email, password))
+        cur.execute("INSERT INTO users(name, email, password) VALUES(%s, %s, %s)", (name, email, password))
         mysql.connection.commit()
         cur.close()
         return 'successe'
