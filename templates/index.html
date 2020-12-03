@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="{{url_for('static', filename='icon.ico')}}" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
 </head>
-<body class="light-theme || dark-theme">
+<body class="dark-theme || light-theme">
     <section class="top-page">
         <header class="header">
             <img src="{{url_for('static', filename='Logo.png')}}" alt="SakinaHistoire">
@@ -39,7 +39,7 @@
         </h2>
         <div class="best-stories">
             <a class="story-box story1 no-grid">
-                <div class="story-details ">
+                <div class="story-details">
                     <p class="story-name">{{beststory1}}</p>
                     <p class="story-price">{{beststory1price}}</p>
                 </div>
@@ -203,7 +203,7 @@ nav.nav li a{
     position: absolute;
     width: 100%;
     bottom: 0;
-    
+    background-color: #FFFFFFDF;
     padding: 5px 20px;
 }
 .story-name {
@@ -234,7 +234,10 @@ body {
 }
 body.dark-theme {
   color: #eee;
-  background: #121212;
+  background: #000000;
+}
+body.dark-theme section.bests-items a div {
+    background-color: #000000df;
 }
 </style>
 <script>
