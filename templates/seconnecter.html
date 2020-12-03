@@ -13,7 +13,8 @@
             <nav class="nav">
                 <a href="\">Accueil</a>
                 <a href="products">Histoires</a>
-                <a href="seconnecter">Se Connecter</a>
+				<a href="seconnecter">Se Connecter</a>
+				<a class="theme-btn">Theme</a>
             </nav>
         </header>
     </section>
@@ -131,7 +132,18 @@ signInButton.addEventListener('click', () => {
         color: #2f3640;
         transform: scale(1.1);
     }
+</style>
+<script>
+	// Select the button
+    const btn = document.querySelector('.theme-btn');
     
+    // Listen for a click on the button
+    btn.addEventListener('click', function() {
+      // Then toggle (add/remove) the .dark-theme class to the body
+      document.body.classList.toggle('dark-theme');
+    })
+</script>
+<style>
 section .login-register {
 	background: #f6f5f7;
 	display: flex;
@@ -362,5 +374,13 @@ input {
 }
 .social-in {
     background-color: lightseagreen;
+}
+body.dark-theme {
+    color: #eee;
+    background: #121212;
+}
+body {
+    color: #222;
+    background: #fff;
 }
 </style>
