@@ -133,16 +133,6 @@ signInButton.addEventListener('click', () => {
         transform: scale(1.1);
     }
 </style>
-<script>
-	// Select the button
-    const btn = document.querySelector('.theme-btn');
-    
-    // Listen for a click on the button
-    btn.addEventListener('click', function() {
-      // Then toggle (add/remove) the .dark-theme class to the body
-      document.body.classList.toggle('dark-theme');
-    })
-</script>
 <style>
 section .login-register {
 	background: #f6f5f7;
@@ -377,10 +367,31 @@ input {
 }
 body.dark-theme {
     color: #eee;
-    background: #121212;
+    background: #000000;
 }
 body {
     color: #222;
     background: #fff;
 }
+body.dark-theme section.login-register div.container div form {
+	background: #121212;
+}
+body.dark-theme section.login-register div.container {
+	background: #121212;
+	box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 
+			0 10px 10px rgba(255, 255, 255, 0.22);
+}
+body.dark-theme section.login-register div.container div form a{
+	color: rgb(204, 204, 204);
+}
 </style>
+<script>
+	// Select the button
+    const btn = document.querySelector('.theme-btn');
+    
+    // Listen for a click on the button
+    btn.addEventListener('click', function() {
+      // Then toggle (add/remove) the .dark-theme class to the body
+      document.body.classList.toggle('dark-theme');
+    })
+</script>
