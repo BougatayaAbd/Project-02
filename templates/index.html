@@ -10,7 +10,7 @@
 <body class="dark-theme || light-theme">
     <section class="top-page">
         <header class="header">
-            <img src="{{url_for('static', filename='Logo.png')}}" alt="SakinaHistoire">
+            <img src="{{url_for('static', filename='Logo.png')}}" alt="SakinaHistoire" id="Logo">
             <nav class="nav">
                 <li><a href="/">Accueil</a></li>
                 <li><a href="products">Histoires</a></li>
@@ -260,5 +260,6 @@ const btn = document.querySelector('.theme-btn');
 btn.addEventListener('click', function() {
   // Then toggle (add/remove) the .dark-theme class to the body
   document.body.classList.toggle('dark-theme');
+  document.getElementById("Logo").innerHTML = '<img src="2.png" />';
 })
 </script>
