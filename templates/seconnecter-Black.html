@@ -35,12 +35,12 @@
 <body>
     <section class="top-page">
         <header class="header">
-			<a href="\" class="Logo"><img src="{{url_for('static', filename='Logo.png')}}" alt="SakinaHistoire"></a>
+			<a href="http://localhost:5000/black" class="Logo"><img src="{{url_for('static', filename='Logo.png')}}" alt="SakinaHistoire"></a>
             <nav class="nav">
-                <a href="\">Accueil</a>
-                <a href="products">Histoires</a>
-				<a href="seconnecter">Se Connecter</a>
-				<a class="theme-btn">Theme</a>
+                <a href="http://localhost:5000/black">Accueil</a>
+                <a href="http://localhost:5000/products/black">Histoires</a>
+				<a href="http://localhost:5000/seconnecter/black">Se Connecter</a>
+				<a href="http://localhost:5000/seconnecter">Theme</a>
             </nav>
         </header>
     </section>
@@ -148,19 +148,19 @@ signInButton.addEventListener('click', () => {
     }
     .nav a{
         margin-left: 10px;
-        color: #ddd;
+        color: #000;
         text-transform: uppercase;
         font-size: 14px;
         padding: 12px 20px;
         border-radius: 4px;
         transition: .3 linear;
-		cursor: default;
+        cursor: default;
     }
     .nav a:hover {
-        background: #fff;
-        color: #2f3640;
+        background: #000;
+        color: #99b3d6;
         transform: scale(1.1);
-		cursor: default;
+        cursor: default;
     }
 </style>
 <style>
@@ -395,36 +395,22 @@ input {
 .social-in {
     background-color: lightseagreen;
 }
-body.dark-theme {
+body {
     color: #eee;
     background: #000000;
 }
-body {
-    color: #222;
-    background: #fff;
-}
-body.dark-theme section.login-register div.container div form {
+body section.login-register div.container div form {
 	background: #121212;
 }
-body.dark-theme section.login-register div.container {
+body section.login-register div.container {
 	background: #121212;
 	box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 
 			0 10px 10px rgba(255, 255, 255, 0.22);
 }
-body.dark-theme section.login-register div.container div form a{
+body section.login-register div.container div form a{
 	color: rgb(204, 204, 204);
 }
-body.dark-theme section.login-register div.container div form input{
+body section.login-register div.container div form input{
 	background-color: rgb(17, 17, 17);
 }
 </style>
-<script>
-	// Select the button
-    const btn = document.querySelector('.theme-btn');
-    
-    // Listen for a click on the button
-    btn.addEventListener('click', function() {
-      // Then toggle (add/remove) the .dark-theme class to the body
-      document.body.classList.toggle('dark-theme');
-    })
-</script>

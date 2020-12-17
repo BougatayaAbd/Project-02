@@ -67,5 +67,17 @@ def seconnecter():
         mysql.connection.commit()
         cur.close()
     return render_template('seconnecter.html')
+@app.route('/seconnecter/black', methods=['GET', 'POST'])
+def blackseconnecter():
+    if request.method == 'POST':
+        userDetails = request.form
+        name = userDetails['name']
+        email = userDetails['email']
+        password = userDetails['password']
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO users(name, email, password) VALUES(%s, %s, %s)", (name, email, password))
+        mysql.connection.commit()
+        cur.close()
+    return render_template('seconnecter-Black.html')
 if __name__ == "__main__":
     app.run(debug=True)
